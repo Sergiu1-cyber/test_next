@@ -1,5 +1,6 @@
 import Image from "next/image";
 import tree from "../public/tree.jpg";
+import Form from "@/components/Form";
 
 export default function Home() {
   return (
@@ -9,7 +10,8 @@ export default function Home() {
       alt="img"
       className="w-full"
     />
-    <h3 className="text-red-600">App</h3>
+
+    <Form />
   </div>
   );
 }
