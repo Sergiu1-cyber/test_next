@@ -1,10 +1,17 @@
+"use client"
+
+import { useRef } from "react";
+import { OnSubmit } from "@/actions/InputForm"; 
 
 export default function Form() {
 
-
+const ref = useRef<HTMLFormElement>(null)
 
   return (
-    <form id="form_1" className="border-2 border-solid border-blue-500 p-5">
+    <form ref={ref} id="form_1" className="border-2 border-solid border-blue-500 p-5" action={async (formData) => {
+      await OnSubmit(formData)
+      ref.current?.reset()
+    }}>
       <div className="flex flex-col">
         <h3>Form</h3>
         <div className="flex">
