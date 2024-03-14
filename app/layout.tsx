@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import NavigationBarr from "@/components/NavigationBarr";
+import Image from "next/image";
+import tree from "../public/tree.jpg";
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,6 +19,11 @@ export default function RootLayout({
     <html lang="en">
       <body >
         <NavigationBarr />
+        <Image 
+      src={tree}
+      alt="img"
+      className="w-full"
+    />
         {children}
       </body>
     </html>
