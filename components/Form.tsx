@@ -13,7 +13,7 @@ const ref = useRef<HTMLFormElement>(null)
       ref.current?.reset()
     }}>
       <div className="flex flex-col">
-        <h3>Form</h3>
+        <h3>Salvez Operatiile</h3>
         <div className="flex">
           <div className="flex flex-col mb-2 mr-4">
             <label htmlFor="cistig">Cistig</label>
