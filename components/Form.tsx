@@ -8,8 +8,10 @@ export default function Form() {
 const ref = useRef<HTMLFormElement>(null)
 
   return (
-    <form ref={ref} id="form_1" className="border-2 border-solid border-blue-500 p-5" action={async (formData) => {
-      await OnSubmit(formData)
+    <form ref={ref} id="form_1" 
+      className="border-2 border-solid border-blue-500 p-5" 
+      action={async (formData) => {
+        await OnSubmit(formData)
       ref.current?.reset()
     }}>
       <div className="flex flex-col">
