@@ -7,7 +7,9 @@ export async function POST(req: Request) {
 
     try {
         await connectDB()
-//        await Operatii.create(data)
+        const op = new Operatii(data)
+        console.log(op)
+        await op.save()
         return NextResponse.json({msg: "date salvate"})
     } catch(e) {
         console.log(`Error in route.js : ${e}`)
