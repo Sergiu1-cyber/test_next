@@ -12,7 +12,7 @@ const ref = useRef<HTMLFormElement>(null)
       className="border-2 border-solid border-blue-500 p-5" 
       action={async (formData) => {
         await OnSubmit(formData)
-      ref.current?.reset()
+        ref.current?.reset()
     }}>
       <div className="flex flex-col">
         <h3>Salvez Operatiile</h3>
