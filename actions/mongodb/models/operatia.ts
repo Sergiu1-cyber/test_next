@@ -13,7 +13,5 @@ const operatiiSchema = new Schema({
     }
 })
 
-const Operatii = mongoose.models.Operatii || mongoose.model("Operatii", operatiiSchema)
-
-export default Operatii;
+export default mongoose.models.Operatii || mongoose.model("Operatii", operatiiSchema);
 
