@@ -2,15 +2,21 @@
 
 export async function InputOperatii(formData: FormData) {
 
-    const operatii = {
+    const operatia = {
         tipul: formData.get("tipul"),
         denumirea: formData.get("operatia")
     }
 
-    console.log(
-        `form data is: \n
-          ${JSON.stringify(operatii)}`
-      )
+      const res = await fetch(`${process.env.URL}api/operatii`, {
+        method: "POST",
+        headers: {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify(operatia)
+      });
     
+      const {msg} = await res.json()
+
+      console.log(msg)
 }
 

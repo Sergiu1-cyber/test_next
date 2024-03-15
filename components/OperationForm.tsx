@@ -1,12 +1,19 @@
 "use client"
 
+import { InputOperatii } from "@/actions/InputOperatii";
+import { useRef } from "react";
 
 export default function OperationForm() {
 
-    return (
-        <form className="flex flex-col" action={
+const ref = useRef<HTMLFormElement>(null)
 
-        }>
+    return (
+        <form className="flex flex-col"
+            ref={ref} 
+            action={async (formData) => {
+            await InputOperatii(formData)
+            ref.current?.reset()
+        }}>
         <div className="flex">
             <div className="flex flex-col mb-2 mr-4">
                 <label htmlFor="cistig">Cistig</label>
