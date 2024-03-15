@@ -1,7 +1,6 @@
 "use server"
 
 export async function OnSubmit(formData: FormData) {
-  "use server"
 
   const formObject = {
     operatia: formData.get("operatia"),
