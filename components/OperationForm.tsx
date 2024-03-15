@@ -1,15 +1,20 @@
+"use client"
+
 
 export default function OperationForm() {
+
     return (
-        <form className="flex flex-col" action="">
+        <form className="flex flex-col" action={
+
+        }>
         <div className="flex">
             <div className="flex flex-col mb-2 mr-4">
                 <label htmlFor="cistig">Cistig</label>
-                <input type="radio" id="cistig" name="operatia" value="cistig" />
+                <input type="radio" id="cistig" name="tipul" value="cistig" />
             </div>
             <div className="flex flex-col mb-2">
                 <label htmlFor="cheltui">Cheltui</label>
-                <input type="radio" id="cheltui" name="operatia" value="cheltui" />
+                <input type="radio" id="cheltui" name="tipul" value="cheltui" />
             </div>
         </div>
             <label htmlFor="operatia">Operatia</label>
@@ -18,3 +23,5 @@ export default function OperationForm() {
         </form>
     );
 }
+
+
