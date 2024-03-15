@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 
-const operatiiSchema = new Schema({
+const operatieSchema = new Schema({
     tipul: {
         type: String,
         required: [true, "bifeaza tipul"]
@@ -13,5 +13,5 @@ const operatiiSchema = new Schema({
     }
 })
 
-export default mongoose.models.Operatii || mongoose.model("Operatii", operatiiSchema);
+export default mongoose.models.Operatii || mongoose.model("Operatii", operatieSchema);
 
