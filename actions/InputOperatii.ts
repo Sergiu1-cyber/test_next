@@ -7,7 +7,8 @@ export async function InputOperatii(formData: FormData) {
         denumirea: formData.get("operatia")
     }
 
-      const res = await fetch(`${process.env.URL}api/operatii`, {
+//      const res = await fetch(`${process.env.URL}api/operatii`, {
+      const res = await fetch(`api/operatii`, {
         method: "POST",
         headers: {
             "Content-type": "application/json"
